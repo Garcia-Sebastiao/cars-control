@@ -7,8 +7,8 @@ export function Header() {
   const { setFilter, setType, type } = useVehiclesStore();
 
   return (
-    <header className="flex border-b border-b-[#002D44] py-5 w-full justify-between items-center">
-      <div className="flex items-center gap-x-[8.5rem]">
+    <header className="flex flex-col gap-y-8 lg:flex-row border-b border-b-[#002D44] py-5 w-full justify-between items-center">
+      <div className="flex items-center  gap-x-4 lg:gap-x-[8.5rem]">
         <h2 className="text-lg text-white font-medium">Lista</h2>
         <div className="flex items-center gap-6">
           <InputRadio

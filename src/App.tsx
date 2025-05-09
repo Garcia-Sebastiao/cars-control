@@ -4,8 +4,8 @@ import { VehicleTable } from "./features/vehicles/vehicles";
 
 export function App() {
   return (
-    <div className="w-full min-h-screen pb-10 bg-[#000F17]">
-      <div className="w-full px-10 max-w-[84.25rem] space-y-6 mx-auto">
+    <div className="w-full min-h-screen overflow-x-hidden pb-10 bg-[#000F17]">
+      <div className="w-full px-4 lg:px-10 max-w-[84.25rem] space-y-6 mx-auto">
         <Header />
         <VehiclesMap />
         <VehicleTable />

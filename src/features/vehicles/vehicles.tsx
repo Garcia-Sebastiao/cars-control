@@ -18,7 +18,6 @@ export function VehicleTable() {
     isGettingVehicles,
     hasNextPage,
     selectedVehicle,
-    setSelectedVehicle,
     loadMoreRef,
   } = useVehicleTable();
 
@@ -64,7 +63,6 @@ export function VehicleTable() {
                       ? "bg-[#002d44]"
                       : ""
                   }`}
-                  onClick={() => setSelectedVehicle(vehicle)}
                 >
                   <VehicleTableItem>
                     {vehicle.plate ?? "-- --"}
