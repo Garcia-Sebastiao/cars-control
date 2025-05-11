@@ -16,18 +16,30 @@ export function useVehicleMap() {
 
   useEffect(() => {
     if (locationVehicles.length > 0) {
+      // Primeiro desativa a API
       setIsApiLoaded(false);
-      setCenter({
-        lat: locationVehicles[2].lat,
-        lng: locationVehicles[2].lng,
-      });
+      
+      // Força a reinicialização do mapa
       setMapKey((prev) => prev + 1);
+      
+      // Atualiza o centro do mapa
+      setCenter({
+        lat: locationVehicles[0]?.lat,
+        lng: locationVehicles[0]?.lng,
+      });
+
+      // Pequeno delay para garantir que o mapa seja reiniciado
+      const timer = setTimeout(() => {
+        setIsApiLoaded(true);
+      }, 300);
+
+      return () => clearTimeout(timer);
     }
   }, [locationVehicles]);
 
   const handleSelectVehicle = (vehicle: LocationVehicle) => {
     setLocationVehicleDetails(vehicle);
-    setCenter({ lat: vehicle.lat, lng: vehicle.lng });
+    setCenter({ lat: vehicle?.lat, lng: vehicle?.lng });
   };
 
   return {

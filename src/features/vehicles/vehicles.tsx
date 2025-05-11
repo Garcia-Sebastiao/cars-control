@@ -30,7 +30,7 @@ export function VehicleTable() {
               {vehiclesTableItems?.map((item) => (
                 <TableHead
                   key={item?.id}
-                  className="text-white text-sm text-center px-[5.625rem] py-4 font-medium bg-[#001622]"
+                  className="text-white text-xs lg:text-sm text-center px-10 lg:px-[5.625rem] py-4 font-medium bg-[#001622]"
                 >
                   {item?.name}
                 </TableHead>
