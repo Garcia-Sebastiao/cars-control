@@ -1,18 +1,31 @@
+import { cn } from "@/lib/utils";
+
 type InputRadioProps = {
   isChecked: boolean;
   onChange: () => void;
   label: string;
+  disabled?: boolean;
+  className?: string;
 };
 
-export function InputRadio({ isChecked, onChange, label }: InputRadioProps) {
+export function InputRadio({
+  isChecked,
+  onChange,
+  label,
+  disabled,
+  className,
+}: InputRadioProps) {
   return (
-    <label className="flex items-center gap-2 cursor-pointer">
+    <label
+      className={cn("flex items-center gap-2 cursor-pointer", className)}
+    >
       <div className="relative flex items-center">
         <input
           type="radio"
           className="sr-only"
           checked={isChecked}
           onChange={onChange}
+          disabled={disabled}
         />
         <div
           className={`w-6 h-6 flex items-center justify-center rounded-full border-2 ${
