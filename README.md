@@ -1,54 +1,42 @@
-# React + TypeScript + Vite
+🚗 Cars Control
+Cars Control is a lightweight web application designed to display the real-time locations of vehicles in a transport company. It provides a simple and intuitive interface to monitor fleet movement with precision.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 Live Demo
+👉 View the deployed app on Vercel
 
-Currently, two official plugins are available:
+🛠️ Features
+📍 Real-time location tracking of vehicles
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🧭 Interactive map interface
 
-## Expanding the ESLint configuration
+🚘 Overview of all active transport units
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+⚙️ Built with modern frontend technologies
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+📦 Tech Stack
+Framework: React / Next.js
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Deployment: Vercel
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Map: (e.g., Leaflet, Mapbox, Google Maps — if used, specify here)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+🚀 Getting Started
+To run this project locally:
+
+bash
+Copiar
+Editar
+git clone https://github.com/your-username/cars-control.git
+cd cars-control
+npm install
+npm run dev
+Open http://localhost:3000 in your browser to see the result.
+
+📌 Notes
+The app is currently a prototype and may not reflect live GPS tracking unless configured with actual vehicle data.
+
+Designed with scalability in mind for future features like user roles, trip history, or vehicle status indicators.
+
+📫 Contact
+Feel free to reach out or contribute!
+Your feedback and suggestions are welcome.
